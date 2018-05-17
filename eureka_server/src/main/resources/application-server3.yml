@@ -2,7 +2,7 @@ server:
   port: 8763 #端口号
 eureka:
   client:
-    #registerWithEureka: false #是否注册自身到eureka服务器  默认为true
-    #fetchRegistry: false #是否从eureka服务器获取注册信息 默认为true
+    registerWithEureka: true  #是否注册自身到eureka服务器  默认为true 是
+    fetchRegistry: true #是否从eureka服务器获取注册信息 默认为true 是
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/${spring.application.name}/,http://${eureka.instance.hostname}:8762/${spring.application.name}/
